@@ -1,0 +1,117 @@
+.github {
+  text-align: center;
+}
+.gh-container {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.repos {
+  width: 30vw;
+  height: 10vh;
+  border: 1px solid rgb(239, 189, 62);
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgb(40, 40, 40);
+  background-color: rgb(250, 111, 133);
+}
+
+.repos:hover {
+  animation: wiggle 1s 1 ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.repos a {
+  font-size: 20px;
+  word-wrap: break-word;
+  display: block;
+  width: 100%;
+  color: rgb(135, 244, 224);
+  text-decoration: none;
+}
+
+.repos a.change-colour {
+  color: rgb(239, 189, 62);
+  transition: color 1s ease-in;
+}
+@keyframes wiggle {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+.card p {
+  display: none;
+}
+@media (min-width: 960px) {
+  .github {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  .gh-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8em;
+    padding: 3rem;
+    animation: shimmering 2s 1 ease-in-out;
+  }
+  .github h2 {
+    font-size: 2em;
+    writing-mode: vertical-lr;
+    display: block;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .card p {
+    width: 80%;
+    text-align: left;
+    display: block;
+    font-size: 20px;
+    color: rgb(1, 27, 163);
+  }
+  .repos {
+    width: 20%;
+    height: 7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    background-size: contain;
+  }
+}
+
+@keyframes shimmering {
+  0% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}

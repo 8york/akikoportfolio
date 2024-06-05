@@ -1,0 +1,176 @@
+body {
+  background: radial-gradient(
+    circle,
+    rgba(239, 189, 62, 0.853) 10%,
+    rgba(1, 27, 163, 0.757) 50%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+header {
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 3em;
+}
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+}
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0;
+  color: rgb(135, 244, 224);
+}
+
+.webspan {
+  color: rgb(88, 164, 150);
+  text-align: center;
+}
+
+.navu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+li {
+  list-style-type: none;
+}
+
+.navi a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: rgba(239, 189, 62, 0.5);
+  transition: all 0.5s ease-in;
+}
+
+.navi a:hover {
+  opacity: 1;
+  color: rgb(135, 244, 224);
+  background-color: rgb(250, 111, 133);
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+.social {
+  display: flex;
+  gap: 0.5em;
+}
+.social i {
+  font-size: 1.5rem;
+  color: rgb(250, 111, 133);
+}
+
+li,
+a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 20px;
+  color: rgb(135, 244, 224);
+  text-align: center;
+}
+
+.bottomh2 {
+  display: none;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.aboutme {
+  padding-left: 10px;
+  position: fixed;
+  bottom: 0px;
+  text-align: left;
+  bottom: 0px;
+  background: linear-gradient(
+    to left,
+    rgb(255, 50, 166),
+    /* rgb(10, 88, 10), */ rgb(239, 189, 62)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: wave 10s linear infinite, warping 10s linear infinite;
+}
+
+@keyframes warping {
+  0% {
+    background-position: -1000px 0;
+    opacity: 0.2;
+  }
+
+  25% {
+    background-position: -500px 0;
+    opacity: 0.5;
+  }
+
+  50% {
+    background-position: 0 0;
+    opacity: 1;
+  }
+
+  75% {
+    background-position: 500px 0;
+    opacity: 0.5;
+  }
+  100% {
+    background-position: 1000px 0;
+    opacity: 0.2;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+    width: 50%;
+  }
+  25% {
+    transform: translateY(-5px);
+    width: -50%;
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 960px) {
+  .sec-container .toph2,
+  .sec-container .bottomh2 {
+    font-size: 3em;
+    writing-mode: vertical-lr;
+    padding-top: 2em;
+    display: block;
+  }
+
+  .about {
+    position: absolute;
+    right: 40%;
+    bottom: 10%;
+  }
+
+  .aboutme {
+    /* text-align: left; */
+    padding-left: 0;
+  }
+}
